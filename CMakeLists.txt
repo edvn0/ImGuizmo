@@ -11,6 +11,5 @@ file(GLOB sources *.cpp)
 
 add_library(${LIBRARY_NAME} STATIC ${sources})
 target_include_directories(
-  ${LIBRARY_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR} ../imgui
-                            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
-target_compile_definitions(${LIBRARY_NAME} PUBLIC -DImTextureID=ImU64)
+   ${LIBRARY_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR} ../imgui
+   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
